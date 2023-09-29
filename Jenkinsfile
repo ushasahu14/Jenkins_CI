@@ -17,10 +17,10 @@ pipeline {
     stages {
         stage("Input"){
             agent any
-            input {
-               message "enter your input" 
-               ok "go ahead"
-        }|
+            input [
+               message: "enter your input" ,
+               ok :"go ahead",
+            ]
         }
         
                
