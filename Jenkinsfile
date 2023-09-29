@@ -15,12 +15,7 @@ pipeline {
           }
 
     stages {
-        stage("Input"){
-            input {
-               message "enter your input" 
-               ok "go ahead"
-        }|
-        }
+        
         
                
         stage('Build') {
