@@ -15,10 +15,13 @@ pipeline {
           }
 
     stages {
-        input {
+        stage("Input"){
+            input {
                message "enter your input" 
                ok "go ahead"
         }|
+        }
+        
                
         stage('Build') {
             steps {
