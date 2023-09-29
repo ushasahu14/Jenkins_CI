@@ -15,7 +15,13 @@ pipeline {
           }
 
     stages {
-        
+        stage("Input"){
+            agent any
+            input {
+               message "enter your input" 
+               ok "go ahead"
+        }|
+        }
         
                
         stage('Build') {
