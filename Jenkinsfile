@@ -16,7 +16,7 @@ pipeline {
 
     stages {
         input {message:"enter your input", 
-               ok "go ahead"
+               ok: "go ahead",
                string(name:"INPUT",defaultValue:"Usha")
                }
         stage('Build') {
