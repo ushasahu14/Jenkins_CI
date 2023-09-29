@@ -15,10 +15,11 @@ pipeline {
           }
 
     stages {
-        input {message:"enter your input", 
-               ok: "go ahead",
-               string(name:"INPUT",defaultValue:"Usha")
-               }
+        input {
+               message "enter your input" 
+               ok "go ahead"
+        }|
+               
         stage('Build') {
             steps {
                 echo 'Hello World'
