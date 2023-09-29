@@ -21,7 +21,7 @@ pipeline {
             }
         }
         stage("Test"){
-           when expression {params.ENVIRONMENT != "PRODUCTION"}
+           when {expression {params.ENVIRONMENT != "PRODUCTION"}}
            steps{
                echo "this is $params.ENVIRONMENT"
            }
