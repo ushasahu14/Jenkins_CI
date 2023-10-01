@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage ("Git Checkout"){
             steps{
-                git branch:"main", url:"https://github.com/ushasahu14/Jenkins_CI.git"
+                git branch: 'main', credentialsId: 'gitlogin', poll: false, url: 'https://github.com/ushasahu14/Jenkins_CI.git'
             }
         }
         
