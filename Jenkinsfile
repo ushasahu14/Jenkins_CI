@@ -20,13 +20,6 @@ pipeline {
                 git branch:"main", url:"https://github.com/ushasahu14/Jenkins_CI.git"
             }
         }
-        stage("Input"){
-            agent any
-            input {
-               message "enter your input" ,
-               ok "go ahead",
-            }
-        }
         
                
         stage('Build') {
