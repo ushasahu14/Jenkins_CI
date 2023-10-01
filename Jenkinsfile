@@ -25,6 +25,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello World'
+                sh " python3 helloworld.py"
             }
         }
         stage("Test"){
