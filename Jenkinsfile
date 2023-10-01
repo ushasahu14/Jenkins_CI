@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     parameters {
         choice( name:"ENVIRONMENT",
                 choices:["DEVELOPMENT" ,"STAGING" ,"PRODUCTION"],
