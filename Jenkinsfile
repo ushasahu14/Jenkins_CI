@@ -39,7 +39,7 @@ pipeline {
            when {expression {params.ENVIRONMENT != "PRODUCTION"}}
            steps{
                echo "this is $params.ENVIRONMENT"
-               echo ${var1}
+               echo "${var1}"
            }
         }
         stage("Deploy"){
