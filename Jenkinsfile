@@ -15,6 +15,7 @@ pipeline {
             defaultValue:"this is log",
             description:"this is text")
         string(name:"strparam")
+        booleanParam(name:"boovar")
    
           }
 
