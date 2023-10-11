@@ -13,8 +13,8 @@ pipeline {
         text(name:"Changelog",
             defaultValue:"this is log",
             description:"this is text")
-        string(name:"stringvar",defaultValue="None")
-        booleanParam(name:"boolvar",defaultValue="true")
+        string(name:"stringvar",defaultValue="x")
+        booleanParam(name:"boolvar",defaultValue=true)
    
           }
 
