@@ -14,7 +14,7 @@ pipeline {
         text(name:"Changelog",
             defaultValue:"this is log",
             description:"this is text")
-
+        string(name:"strparam")
    
           }
 
