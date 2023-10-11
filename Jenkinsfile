@@ -1,5 +1,7 @@
+
 pipeline {
     agent any
+    options {timeout(time:1,unit:"HOURS")}
     parameters {
         choice( name:"ENVIRONMENT",
                 choices:["DEVELOPMENT" ,"STAGING" ,"PRODUCTION"],
@@ -11,7 +13,9 @@ pipeline {
         text(name:"Changelog",
             defaultValue:"this is log",
             description:"this is text")
-            
+        string(name:"stringvar",defaultValue="None")
+        booleanParams(name:"boolvar",defaultValue="true")
+   
           }
 
     stages {
@@ -25,20 +29,24 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello World'
-                sh " python3 helloworld.py"
+                sh "python3 helloworld.py"
+                script{
+                    var1 = sh (returnStdout:true, script:"echo 1").trim()
+                }
             }
         }
         stage("Test"){
            when {expression {params.ENVIRONMENT != "PRODUCTION"}}
            steps{
                echo "this is $params.ENVIRONMENT"
+               echo ${var1}
            }
         }
         stage("Deploy"){
            when{expression { params.ENVIRONMENT == "PRODUCTION"}}
            steps{
                
-               echo "this is $params.ENVIRONMENT , $v1,$v2"
+               echo "this is $params.ENVIRONMENT , $var1"
            }
         }
 
