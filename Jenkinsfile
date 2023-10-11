@@ -3,7 +3,7 @@ pipeline {
     agent any
     options {timeout(time:1,unit:"HOURS")}
     parameters {
-        string(name:"stringvar",defaultValue="x")
+        string(name:"newname",defaultValue="x")
         choice( name:"ENVIRONMENT",
                 choices:["DEVELOPMENT" ,"STAGING" ,"PRODUCTION"],
                 description:"these are the choices")
@@ -30,8 +30,9 @@ pipeline {
             steps {
                 echo 'Hello World'
                 sh "python3 helloworld.py"
+                script{
                 var1 =  sh (returnStdout:true, script:"echo 1").trim()
-         
+                }
             }
         }
         stage("Test"){
