@@ -5,7 +5,8 @@ pipeline {
     parameters {
         string(
                name:"newname",
-               defaultValue="x")
+               defaultValue="x",
+               description="this is string var")
         choice( name:"ENVIRONMENT",
                 choices:["DEVELOPMENT" ,"STAGING" ,"PRODUCTION"],
                 description:"these are the choices")
