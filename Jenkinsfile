@@ -14,7 +14,7 @@ pipeline {
             defaultValue:"this is log",
             description:"this is text")
         string(name:"stringvar",defaultValue="None")
-        booleanParams(name:"boolvar",defaultValue="true")
+        booleanParam(name:"boolvar",defaultValue="true")
    
           }
 
