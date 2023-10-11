@@ -3,7 +3,9 @@ pipeline {
     agent any
     options {timeout(time:1,unit:"HOURS")}
     parameters {
-        string(name:"newname",defaultValue="x")
+        string(
+               name:"newname",
+               defaultValue="x")
         choice( name:"ENVIRONMENT",
                 choices:["DEVELOPMENT" ,"STAGING" ,"PRODUCTION"],
                 description:"these are the choices")
