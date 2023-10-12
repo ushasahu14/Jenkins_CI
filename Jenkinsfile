@@ -32,7 +32,7 @@ pipeline {
                 echo 'Hello World'
                 sh "python3 helloworld.py"
                 script{
-                var1 =  sh (returnStdout:true, script:"echo 1").trim()
+                var1 =  sh (returnStdout:true, script:"echo 453").trim()
                 }
             }
         }
